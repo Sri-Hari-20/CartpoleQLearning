@@ -42,4 +42,5 @@ Loads a given .npy file into memory and then uses it to make greedy actions.
 
 #### Examples:
 ```python main.py --train```
+<br>
 ```python main.py --run --file sample.npy --save```
