@@ -78,6 +78,29 @@ class Cartpole:
         self.q_table[state][action] += self.learning_rate * (reward + self.discount * np.max(
             self.q_table[new_state]) - self.q_table[state][action])
 
+    """
+        Do some actions at random and see how far the agent goes.
+    """
+
+    def demo(self):
+        # Demonstration of random actions
+        _ = self.env.reset()
+        done = False
+        episode_reward = 0
+        while not done:
+            # Render the environment
+            self.env.render()
+
+            # Get a random action
+            action = self.env.action_space.sample()
+
+            # Gives new state, reward, done, info
+            _, reward, done, _ = self.env.step(action)
+            episode_reward += reward
+        time.sleep(3)
+
+        print("Reward due to random sampling {}".format(episode_reward))
+
     def train(self):
         # Train and store weights once done
         # Episodes iteration

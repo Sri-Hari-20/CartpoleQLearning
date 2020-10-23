@@ -31,6 +31,7 @@ required_named.add_argument(
 group = parser.add_mutually_exclusive_group(required=True)
 group.add_argument('-t', '--train', action='store_true')
 group.add_argument('-r', '--run', action='store_true')
+group.add_argument('-d', '--demo', action='store_true')
 
 # Parsing arguments
 args = parser.parse_args()
@@ -61,3 +62,6 @@ if __name__ == "__main__":
     elif args.run:
         print("Info: Running initiated")
         agent.run()
+    elif args.demo:
+        print("Info: Demo mode")
+        agent.demo()
