@@ -23,6 +23,8 @@ requirements.txt has been provided to install the neccessary packages for functi
 ## Usage:
 The help section of main.py is kind of misleading as argparse treats all the arguments which start with - or -- as optional, so kindly refer to functionality here.
 
+```python main.py [args]```
+
 The project has 3 modes: Train, Run and Demo
 
 ### 1. Demo: -d or --demo
@@ -37,3 +39,7 @@ Loads a given .npy file into memory and then uses it to make greedy actions.
 #### Required: One filename saved under store/qtable (along with .npy extension). -f file_name or --file file_name
 
 #### Optional: Store the video of the agent under a given weight. -s or --save. Stored under store/recording
+
+#### Examples:
+```python main.py --train```
+```python main.py --run --file sample.npy --save```
