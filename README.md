@@ -11,6 +11,15 @@ Q Learning implementation for the "CartPole-v0" environment of the OpenAIGym usi
 
 <hr>
 
+## Additional Requirements:
+In case you want to store the recordings of the trained agent (**run mode with save flag** see below). You have to have ffmpeg additionally installed. This is made much easier if you have a Anaconda enviroment to work with. If yes, run the command below to install ffmpeg. 
+
+```conda install -c conda-forge ffmpeg```
+
+If you use python without Anaconda, you can either run without --save flag, or install ffmpeg in any other way suitable.
+
+<hr>
+
 ## Installation:
 Its best to have a empty virtual environment using virtualenv or conda. Python 3.7 is tested to work, Python 3.8 should ideally work.
 
